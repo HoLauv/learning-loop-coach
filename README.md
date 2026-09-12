@@ -1,10 +1,16 @@
-# EasyLearning · 循证学习教练
+# EasyLearning · Evidence-Based Learning Coach / 循证学习教练
 
 帮助你学习知识、专业技能和备考的通用 AI skill：**learning-loop-coach**。
 
+An AI learning coach for structured self-study and exam preparation: learning plans, complete lessons, Socratic tutoring, retrieval practice, spaced review, quizzes, progress tracking, and an error-review notebook.
+
+**目标 → 计划 → 完整课件 → 对话练习 → 阶段考核 → 进度记录 → 错题复测**
+
+适用于编程、工程、数学、语言及专业备考；不局限于某一种认证。中文教学为默认，教学语言和考试语言可分别配置。
+
 ## 下载与安装
 
-本仓库以完整 ZIP 源码安装包发布，保留技能所需的子目录。请下载 [learning-loop-coach.zip](learning-loop-coach.zip)，解压后得到 `learning-loop-coach` 文件夹。不要把本仓库根目录直接当作技能目录。
+源码入口为 [skills/learning-loop-coach/SKILL.md](skills/learning-loop-coach/SKILL.md)。复制完整的 `skills/learning-loop-coach/` 文件夹，或下载 [learning-loop-coach.zip](learning-loop-coach.zip) 并解压。不要把本仓库根目录直接当作技能目录。
 
 将解压后的文件夹放入所用工具支持的 skills 目录。安装前先比较或备份已有同名技能，避免直接覆盖。安装后重新加载技能列表或打开新会话。
 
@@ -53,4 +59,12 @@ python -m unittest discover -s tests -v
 
 主技能无需 Python；评分脚本使用 Python 3 标准库。本仓库不包含个人学习记录、成绩、私人教材、凭据或第三方 skill 源码。安装不会自动开启定时提醒，也不授权上传学习数据。
 
-尚未指定开源许可证；公开可见不等于授予无限制再分发许可。
+## License / 许可
+
+本项目采用 [MIT-0](LICENSE)，允许使用、修改及商业再分发，无需署名；按原样提供，不作担保。引用的外部研究资料不属于本项目的再授权范围。
+
+## Share and contribute / 分享与反馈
+
+欢迎分享本仓库链接，或通过 Issues 提交使用反馈，通过 Pull Requests 改进课件模板和学习流程。反馈请使用虚构或匿名示例，不上传私人教材、真实成绩或凭据。
+
+检索关键词：AI learning coach · study planner · self-directed learning · active recall · spaced repetition · exam preparation · Socratic tutoring · learning progress · 学习计划 · 系统学习 · 错题本。
