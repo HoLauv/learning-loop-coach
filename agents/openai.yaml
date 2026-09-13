@@ -1,3 +1,3 @@
 interface:
-  display_name: "循证学习教练"
-  short_description: "从目标与完整课件到阶段测验、学习打卡、进度记录和错题复习的学习闭环"
+  display_name: "learning-loop-coach"
+  short_description: "Evidence-based plans, lessons, quizzes and progress tracking"

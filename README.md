@@ -2,7 +2,7 @@
 
 <img src="assets/logo.png" alt="Learning Loop Coach: book, growth and feedback loop" width="220">
 
-一个可复用的循证学习教练skill，用于持续学习知识、专业技能和备考。技能名称为`learning-loop-coach`，显示名称为“循证学习教练”。
+一个可复用的循证学习教练skill，用于持续学习知识、专业技能和备考。技能名称与显示名称均为 `learning-loop-coach`。
 
 ## 能做什么
 

@@ -1,9 +1,9 @@
 ---
 name: learning-loop-coach
-description: "为持续学习知识、专业技能或备考建立循证学习闭环：明确目标、规划路径、编写完整课件、对话教学、阶段测验、打卡进度和错题复习。用于系统学习、继续课程、批量课件、出题评阅和更新学习记录；已有学习项目中的答疑也适用。普通一次性事实问答不自动启动整套计划。"
+description: "Evidence-based learning coach for study planning, structured lessons, quizzes, progress tracking, and mistake review. Use for ongoing learning, exam preparation, lesson creation, assessment, and questions within an existing learning project. Standalone factual questions do not automatically start a full learning plan."
 ---
 
-# 循证学习教练
+# learning-loop-coach
 
 把学习组织成“目标与能力证据 → 先修路径 → 完整课件与练习 → 检索与应用 → 反馈与延迟复测”的循环。面向不同学科调整证据形式，而不是把所有技能都变成选择题考试。默认中文讲解，语言、节奏、格式和实践要求以用户选择为准。
 
