@@ -1,70 +1,43 @@
-# EasyLearning · Evidence-Based Learning Coach / 循证学习教练
+# learning-loop-coach
 
-帮助你学习知识、专业技能和备考的通用 AI skill：**learning-loop-coach**。
+<img src="assets/logo.png" alt="Learning Loop Coach: book, growth and feedback loop" width="220">
 
-An AI learning coach for structured self-study and exam preparation: learning plans, complete lessons, Socratic tutoring, retrieval practice, spaced review, quizzes, progress tracking, and an error-review notebook.
+一个可复用的循证学习教练skill，用于持续学习知识、专业技能和备考。技能名称为`learning-loop-coach`，显示名称为“循证学习教练”。
 
-**目标 → 计划 → 完整课件 → 对话练习 → 阶段考核 → 进度记录 → 错题复测**
+## 能做什么
 
-适用于编程、工程、数学、语言及专业备考；不局限于某一种认证。中文教学为默认，教学语言和考试语言可分别配置。
+- 明确目标与基础，按先修关系制定可调整的学习计划。
+- 生成完整Markdown课件，通过对话、示例、反例和练习教学。
+- 按已学范围生成原创阶段题集，分开试卷、解析与答题记录。
+- 准确批改部分交卷，区分课程完成、打卡和能力证据。
+- 记录错题、主动收藏题、延迟复习和后续迁移表现。
 
-## 下载与安装
+核心方法为检索练习、分散复习、示例到独立练习、反馈及迁移。研究依据和边界见[学习科学](references/learning-science.md)。不承诺保证通过考试或快速掌握任何技能。
 
-源码入口为 [skills/learning-loop-coach/SKILL.md](skills/learning-loop-coach/SKILL.md)。复制完整的 `skills/learning-loop-coach/` 文件夹，或下载 [learning-loop-coach.zip](learning-loop-coach.zip) 并解压。不要把本仓库根目录直接当作技能目录。
+## 安装
 
-将解压后的文件夹放入所用工具支持的 skills 目录。安装前先比较或备份已有同名技能，避免直接覆盖。安装后重新加载技能列表或打开新会话。
-
-```text
-learning-loop-coach/
-  SKILL.md
-  README.md
-  agents/openai.yaml
-  references/       # 规划、教学、考核、记录、学习科学和发布边界
-  assets/           # 学习约定、完整课件和错题条目模板
-  scripts/grade_mcq.py
-  tests/
-```
-
-## 学习闭环
-
-1. 明确目标：将“学会”转化为可观察的能力与验收证据。
-2. 制定计划：结合基础、先修知识、时间预算和阶段检查点。
-3. 完整课件：系统解释、示例、反例、适用条件和练习，不只列概念。
-4. 对话教学：通过提问、示范、逐步减少提示和迁移任务帮助理解。
-5. 阶段考核：按已学范围编写原创题集，保留版本并准确处理部分交卷。
-6. 打卡与进度：区分课件生成、课程发送、自报完成和能力验证。
-7. 错题复习：区分错答、主动收藏和未答预习，安排延迟检索与复测。
-
-使用检索练习、分散复习、反馈、示例到独立练习等循证方法；不承诺固定时间精通或保证通过考试。研究来源与适用边界位于安装包的 `references/learning-science.md`。
+仓库根目录就是skill目录，`SKILL.md` 直接位于根目录，没有额外的 `skills/learning-loop-coach/` 包装层。克隆 https://github.com/HoLauv/learning-loop-coach 到目标环境支持的skills目录，或下载源码后将文件夹命名为 `learning-loop-coach`。保留 `agents/`、`assets/`、`references/`、`scripts/` 和 `tests/` 子目录。同名已存在时先备份/比较，不覆盖。安装后重新加载技能列表。
 
 ## 使用示例
 
 ```text
-使用 $learning-loop-coach 帮我系统学习 Python 数据处理。
+使用 $learning-loop-coach 帮我系统学习Python数据处理。
 我了解变量和循环，每天45分钟，希望6周后独立完成CSV清洗项目。
-请准备完整Markdown课件，通过对话教学，每5课检验一次，并维护进度和错题集。
+用Markdown课件，每5课检查一次，工具操作计入实践评价。
 ```
 
-后续可说：“继续下一课”“完善这课的教材”“按已学范围出30题”“更新打卡”“整理错题和收藏题”。语言、时间、题量和实践是否评分均可调整。
+后续可以直接说“继续下一课”“完善这课的教材”“按已学范围出30题”“更新打卡”“把这些错题和收藏题加入复习集”。语言、时长、题量与工具实践是否计分都可配置。
 
-## 检验与隐私
+## 可执行工具
 
-技能结构校验通过；可选单选题评分脚本通过17项单元测试。静态校验和脚本测试不代表所有教学行为都经过验证；行为检查场景见包内 `tests/behavioral-checks.md`。
-
-解压后可在技能目录运行：
+主skill不依赖Python，也不依赖第三方study-planner。可选的单选题批改脚本使用Python 3标准库，仅读key并输出JSON，不访问网络或写学习文件。使用格式见[考核参考](references/assessment.md)。
 
 ```text
 python -m unittest discover -s tests -v
 ```
 
-主技能无需 Python；评分脚本使用 Python 3 标准库。本仓库不包含个人学习记录、成绩、私人教材、凭据或第三方 skill 源码。安装不会自动开启定时提醒，也不授权上传学习数据。
+## 数据与授权
 
-## License / 许可
+实际学习数据保存在用户工作区，不保存在skill安装目录或此公开仓库。定时提醒需用户明确请求和当前环境可用的调度工具；仅安装skill不会自动建立提醒。未提供文件工具时不会假称已保存，未执行测试时不会假称已验证能力。
 
-本项目采用 [MIT-0](LICENSE)，允许使用、修改及商业再分发，无需署名；按原样提供，不作担保。引用的外部研究资料不属于本项目的再授权范围。
-
-## Share and contribute / 分享与反馈
-
-欢迎分享本仓库链接，或通过 Issues 提交使用反馈，通过 Pull Requests 改进课件模板和学习流程。反馈请使用虚构或匿名示例，不上传私人教材、真实成绩或凭据。
-
-检索关键词：AI learning coach · study planner · self-directed learning · active recall · spaced repetition · exam preparation · Socratic tutoring · learning progress · 学习计划 · 系统学习 · 错题本。
+本项目为新写的工作流、模板与脚本，采用 [MIT-0](LICENSE) 许可，允许使用、修改及商业再分发，无需署名；软件按原样提供，不作担保。不分发用户成绩、私人教材或第三方skill源码；引用资料的权利仍归各自权利人。
